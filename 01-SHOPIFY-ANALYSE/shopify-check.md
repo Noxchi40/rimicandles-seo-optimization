@@ -27,12 +27,4 @@
 
 ---
 
-## ✅ STATUS
 
-- [ ] Screenshots gesammelt
-- [ ] Analyse durchgeführt
-- [ ] Optimierungen geplant
-
----
-
-**Nächster Schritt:** Screenshots in Shopify machen und hier hochladen
