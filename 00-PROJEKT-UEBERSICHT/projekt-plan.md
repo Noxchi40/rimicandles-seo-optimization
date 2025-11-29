@@ -661,3 +661,583 @@ Versandkostenfrei ab 50€. Jetzt Opening Bonus sichern! ✓
 **Nächster Schritt:** Bilder optimieren!
 
 **Let's go! 🚀**
+
+# RIMICANDLES.DE - DESIGN UPGRADE SESSION 2 - FINALE VERSION
+
+## 🎯 PROJEKTKONTEXT
+- **Website:** rimicandles.de
+- **Plattform:** Shopify (Theme: Craft 15.4.0)
+- **Produkt:** Handgefertigte Rapswachs-Duftkerzen
+- **Ziel:** Premium-Design durch CSS-Upgrades
+- **Hauptdatei:** /assets/base.css
+
+---
+
+## ✅ ERFOLGREICH IMPLEMENTIERT (4 VON 10 STEPS)
+
+### STEP 1: TYPOGRAFIE UPGRADE ✅
+**Status:** Vollständig implementiert & funktioniert
+
+**Font:** Playfair Display (Serif, Editorial-Stil wie Vogue/Dior)
+
+**Code-Location:** Ende von base.css
+```css
+/* === TYPOGRAPHY UPGRADE - PLAYFAIR DISPLAY === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+h1, h2, h3, 
+.h0, .h1, .h2, .h3,
+.hxl, .hxxl {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 500;
+  letter-spacing: 0.08em !important;
+  line-height: 1.2 !important;
+}
+
+h1, .h1, .h0, .hxl, .hxxl {
+  letter-spacing: 0.1em !important;
+}
+
+h2, .h2 {
+  letter-spacing: 0.06em !important;
+}
+
+h3, .h3 {
+  letter-spacing: 0.05em !important;
+}
+
+.header__menu-item {
+  letter-spacing: 0.15em !important;
+}
+
+.hero-subtitle,
+.tagline {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+```
+
+**Ergebnis:**
+- ✅ Headlines in eleganter Serif-Schrift
+- ✅ Erhöhtes Letter-Spacing für Luxus-Effekt
+- ✅ Taglines in Italic für Drama
+- ✅ Navigation mit Premium-Spacing
+
+---
+
+### STEP 2: GOLDENE AKZENTE ✅
+**Status:** Vollständig implementiert & funktioniert
+
+**Farbe:** #CBAF87 (bestehende Gold-Farbe)
+```css
+/* === GOLDENE AKZENTE - PREMIUM UPGRADE V2 === */
+
+/* Logo Gold-Glow */
+.header__heading-logo,
+.header__heading-link img {
+  filter: drop-shadow(0 0 10px rgba(203, 175, 135, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.header__heading-logo:hover,
+.header__heading-link:hover img {
+  filter: drop-shadow(0 0 20px rgba(203, 175, 135, 0.6));
+}
+
+/* Button Gold-Glow */
+.button,
+a[href*="scent-store"] {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+a[href*="scent-store"]:hover {
+  box-shadow: 0 0 20px rgba(203, 175, 135, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Navigation Gold Underline */
+.header__menu-item {
+  position: relative;
+}
+
+.header__menu-item::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #CBAF87, transparent);
+  transition: width 0.4s ease;
+}
+
+.header__menu-item:hover::before {
+  width: 100%;
+}
+
+/* Text Shadows */
+.hero-subtitle,
+.tagline,
+h1 + p,
+.announcement-bar__message {
+  text-shadow: 0 0 15px rgba(203, 175, 135, 0.15);
+}
+
+h1, .h1, .h0 {
+  text-shadow: 0 0 25px rgba(203, 175, 135, 0.2);
+}
+
+/* Top Bar Gold-Shimmer */
+.announcement-bar {
+  background: linear-gradient(90deg, 
+    rgba(0,0,0,1) 0%, 
+    rgba(203, 175, 135, 0.05) 50%, 
+    rgba(0,0,0,1) 100%);
+}
+
+/* Icons Gold-Glow */
+.header__icon:hover svg,
+.header__icon:hover .icon {
+  filter: drop-shadow(0 0 8px rgba(203, 175, 135, 0.5));
+  transition: filter 0.3s ease;
+}
+
+.header__search:hover .icon {
+  filter: drop-shadow(0 0 8px rgba(203, 175, 135, 0.5));
+}
+```
+
+**Ergebnis:**
+- ✅ Logo mit subtiler Gold-Aura
+- ✅ Navigation mit goldener Unterstreichung (von Mitte)
+- ✅ Button mit Gold-Shadow beim Hover
+- ✅ Icons mit Gold-Glow
+- ✅ Top-Banner mit Gold-Shimmer
+
+---
+
+### STEP 3: SPACING OPTIMIERUNG ✅
+**Status:** Vollständig implementiert & funktioniert
+
+**Ziel:** Luftigeres Layout ohne übertriebene Lücken
+```css
+/* === SPACING & WHITESPACE UPGRADE - OPTIMIERT === */
+
+.header__menu-item {
+  padding: 1.2rem 2rem !important;
+}
+
+.header__heading-link {
+  padding: 1rem !important;
+}
+
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 990px) {
+  .header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+h1, .h1, .h0 {
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-subtitle,
+.tagline {
+  margin-top: 1.5rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.button {
+  padding: 1.5rem 4rem !important;
+}
+
+@media screen and (min-width: 750px) {
+  .grid {
+    row-gap: 50px !important;
+    column-gap: 40px !important;
+  }
+}
+
+.announcement-bar {
+  min-height: 45px !important;
+}
+
+h1, .h1, .h0, .hxl, .hxxl {
+  line-height: 1.25 !important;
+}
+```
+
+**Ergebnis:**
+- ✅ Navigation mit mehr Breathing Room
+- ✅ Header mit optimiertem Padding
+- ✅ Besseres Spacing zwischen Headlines
+- ✅ Größere Buttons
+- ✅ Optimierte Grid-Gaps
+
+---
+
+### STEP 4: HOVER-EFFEKTE ✅ (TEILWEISE)
+**Status:** Implementiert mit EINEM bekannten Issue
+
+**Implementierter Code:**
+```css
+/* === HOVER-EFFEKTE & MICRO-INTERACTIONS - KORRIGIERT === */
+
+/* Navigation Hover */
+.header__menu-item {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.header__menu-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Logo Hover */
+.header__heading-logo,
+.header__heading-link img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header__heading-link:hover img,
+.header__heading-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Icons Hover */
+.header__icon {
+  transition: transform 0.2s ease;
+}
+
+.header__icon:hover {
+  transform: scale(1.1);
+}
+
+/* Button Hover mit Ripple */
+.button {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(203, 175, 135, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  pointer-events: none;
+}
+
+.button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(203, 175, 135, 0.3);
+}
+
+/* Links Hover */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Collection Links Gold */
+.collection-card__link,
+.card__heading a {
+  transition: color 0.2s ease;
+}
+
+.collection-card__link:hover,
+.card__heading a:hover {
+  color: #CBAF87;
+}
+
+/* Text Selection */
+::selection {
+  background-color: rgba(203, 175, 135, 0.3);
+  color: #000;
+}
+
+::-moz-selection {
+  background-color: rgba(203, 175, 135, 0.3);
+  color: #000;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid #CBAF87;
+  outline-offset: 4px;
+}
+
+/* Cursor */
+.button,
+.header__menu-item,
+.header__icon,
+a,
+.card-wrapper {
+  cursor: pointer;
+}
+```
+
+**⚠️ BEKANNTES ISSUE:**
+
+**Problem:** Card-Wrapper Hover verschiebt Collection-Grid (untereinander statt nebeneinander)
+
+**Nicht implementierter Code-Block:**
+```css
+/* SKIP THIS - BREAKS GRID LAYOUT */
+.card-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(203, 175, 135, 0.2);
+}
+```
+
+**Alternative Lösung für später:**
+```css
+/* Alternative - noch nicht getestet */
+.product-card-wrapper,
+.collection-card-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-wrapper:hover,
+.collection-card-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(203, 175, 135, 0.2);
+}
+```
+
+**Was funktioniert:**
+- ✅ Navigation hebt sich
+- ✅ Logo wird größer
+- ✅ Icons pulsieren
+- ✅ Button Ripple + Lift
+- ✅ Links werden Gold
+- ✅ Gold Selection
+- ✅ Smooth Scroll
+
+**Was noch fehlt:**
+- ⏳ Collection Cards Hover (wegen Grid-Problem)
+
+---
+
+## 🔧 TECHNISCHE DETAILS
+
+**Datei-Location:** 
+```
+Shopify Admin → Online-Shop → Themes → Craft 15.4.0 → 
+Code bearbeiten → Assets → base.css
+```
+
+**Code-Position:** Alle Codes am Ende der base.css eingefügt
+
+**Testing-Methode:** STRG + F5 (Hard Refresh) nach jedem Update
+
+**Farben:**
+- Gold: `#CBAF87`
+- Gold Hell: `#F4E5C2`
+- Schwarz: `#000000`
+- Gold RGBA: `rgba(203, 175, 135, X)`
+
+---
+
+## 📋 NOCH OFFENE STEPS (6 VON 10)
+
+### STEP 5: ⏳ Animationen
+- Fade-in beim Scroll
+- Slide-in Effekte
+- Staggered Animations
+
+### STEP 6: ⏳ Produktkarten Glassmorphism
+- Frosted Glass Effekt
+- Backdrop Filter
+- Subtile Transparenz
+
+### STEP 7: ⏳ Button Premium-Upgrade
+- Gradient Borders
+- Animated Fills
+- Enhanced Ripple
+
+### STEP 8: ⏳ Hero Section Cinematisch
+- Parallax Effekt
+- Video Background Support
+- Enhanced Typography
+
+### STEP 9: ⏳ Footer Eleganter
+- Besseres Spacing
+- Icon Hover States
+- Newsletter Styling
+
+### STEP 10: ⏳ Micro-Interactions
+- Loading States
+- Scroll Progress Bar
+- Toast Notifications
+
+---
+
+## 🐛 BEKANNTE PROBLEME
+
+### Problem 1: Collection Grid Layout ⚠️
+**Status:** Offen
+
+**Beschreibung:** Card-Wrapper Hover verschiebt Collections von horizontal zu vertikal
+
+**Ursache:** CSS Transition auf `.card-wrapper` bricht Shopify Grid-System
+
+**Temporäre Lösung:** Code-Block wurde übersprungen
+
+**Nächste Schritte:** Alternative Selektoren testen
+
+---
+
+### Problem 2: ✅ GELÖST - Zu viel Whitespace
+**Beschreibung:** Erste Version hatte zu aggressive Section-Margins (120-150px)
+
+**Lösung:** Fokus auf Header/Navigation-Spacing, sanftere Werte
+
+---
+
+### Problem 3: ✅ GELÖST - Grid untereinander
+**Beschreibung:** Globales `* { transition: all }` hat Grid kaputtgemacht
+
+**Lösung:** Spezifische Transitions nur für benötigte Elemente
+
+---
+
+## 📊 FORTSCHRITT
+```
+[████████████░░░░░░░░░░] 40% (4/10 Steps)
+
+✅ Typografie
+✅ Gold-Effekte  
+✅ Spacing
+⚡ Hover-Effekte (teilweise)
+⏳ Animationen
+⏳ Glassmorphism
+⏳ Premium Buttons
+⏳ Hero Cinematisch
+⏳ Footer
+⏳ Micro-Interactions
+```
+
+---
+
+## 🎯 NÄCHSTE SESSION PRIORITÄTEN
+
+1. **Collection Cards Hover Fix** - Grid-Layout bewahren
+2. **Scroll Animations** - Fade-in/Slide-in implementieren
+3. **Product Cards Enhancement** - Glassmorphism testen
+
+---
+
+## 💾 VOLLSTÄNDIGER AKTUELLER CODE
+
+**Alle Codes befinden sich am Ende von `/assets/base.css` in folgender Reihenfolge:**
+
+1. Typography Upgrade (Playfair Display)
+2. Goldene Akzente V2
+3. Spacing & Whitespace
+4. Hover-Effekte & Micro-Interactions (ohne Card-Wrapper Hover)
+
+**Gesamtlänge:** ~200 Zeilen CSS am Ende der Datei
+
+---
+
+## 📸 SCREENSHOTS VORHANDEN
+
+- Homepage mit Playfair Display
+- Navigation mit Gold-Hover
+- Collections Section (zeigt Grid-Problem)
+- Newsletter Section
+- Footer
+
+---
+
+## 🎨 DESIGN-PHILOSOPHIE
+
+**Prinzipien:**
+- Subtil, nicht übertrieben
+- Konsistent mit Schwarz/Gold Theme
+- Premium, nicht kitschig
+- Performance-bewusst
+
+**Inspiration:**
+- Vogue Editorial Style
+- Dior Webdesign
+- Moderne Luxus-E-Commerce
+
+---
+
+## 🔄 VERSION HISTORY
+
+**v1.0** - Initial Typography + Gold (zu aggressive Gradienten)  
+**v2.0** - Optimierte Gold-Effekte + Spacing  
+**v2.1** - Hover-Effekte hinzugefügt  
+**v2.2** - Card-Wrapper Hover entfernt (Grid-Problem)  
+**v2.3** - CURRENT - Dokumentation aktualisiert
+
+---
+
+## 📝 NOTIZEN FÜR NÄCHSTE SESSION
+
+1. **Card Hover:** Shopify-spezifische Klassen recherchieren
+2. **Grid System:** Craft Theme Grid-Struktur analysieren
+3. **Testing:** Verschiedene Card-Typen (Product/Collection) separat testen
+4. **Mobile:** Responsive Behavior checken
+
+---
+
+## ✅ SESSION CHECKLIST
+
+- [x] Typography implementiert
+- [x] Gold-Effekte implementiert
+- [x] Spacing optimiert
+- [x] Hover-Effekte (teilweise)
+- [ ] Grid-Problem lösen
+- [ ] Animationen hinzufügen
+- [ ] Mobile Testing
+- [ ] Performance Check
+
+---
+
+**Erstellt:** November 2024  
+**Letzte Änderung:** Session 2 - Hover-Effekte Teilimplementierung  
+**Status:** 4/10 Steps abgeschlossen, 1 bekanntes Issue  
+**Nächster Fokus:** Collection Cards Hover Fix
+
+---
+
+*Dieses Dokument dient der Kontinuität zwischen Sessions und sollte bei jedem Update aktualisiert werden.*
